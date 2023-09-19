@@ -1,0 +1,22 @@
+:root { 
+--tabs-border-color: transparent !important; 
+} 
+
+.tabbrowser-tab {
+  visibility: collapse;
+}
+#nav-bar {
+  margin-top: -40px;
+  margin-right: 105px;
+}
+.titlebar-button  {
+  height: 30px;
+}
+/* note: if your minimize, exit, etc menu is gone, press alt, right click the menu bar and check mark it */
+#sidebar-box {
+    min-width: 0 !important;
+    width: 196px !important;
+    overflow: hidden;
+    box-shadow: 0 0 8px 0 #00000064, 1px 0 0 0 #212121;
+    transition: all 0.12s;
+}
