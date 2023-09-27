@@ -9,7 +9,8 @@ export PATH=$HOME/Documents/ltex-ls/bin:$PATH
 export ZSH_DISABLE_COMPFIX=1
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='nvim'
-
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
 
 bindkey "^[[C" forward-letter # Left
 bindkey "^[[D" backward-letter # Right 
@@ -91,10 +92,11 @@ alias protontricks="flatpak run com.github.Matoking.protontricks"
 
 alias reboot="systemctl reboot"
 alias e="nvim"
-alias b="btop"
+alias t="btop"
 alias pacman="sudo pacman"
 alias windows="grub-reboot 2"
 alias bios="grub-reboot 3"
+alias c="bat"
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
