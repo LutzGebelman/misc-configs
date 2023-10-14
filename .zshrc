@@ -2,15 +2,16 @@
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=$HOME/.emacs.d/bin:$PATH
-export PATH=$HOME/.local/kitty.app/bin:$PATH
-export PATH=$HOME/Documents/ltex-ls/bin:$PATH
+export PATH=$PATH:$HOME/scripts/bin
+export PATH=$PATH:$HOME/scripts/bash
+#
 # Path to your oh-my-zsh installation.
 export ZSH_DISABLE_COMPFIX=1
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR='nvim'
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+
 
 bindkey "^[[C" forward-letter # Left
 bindkey "^[[D" backward-letter # Right 
@@ -83,20 +84,24 @@ ZSH_THEME="lg"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source $ZSH/oh-my-zsh.sh
 
+bindkey -v
 
 alias sudo='sudo '
-alias update="flatpak update -y; sudo pacman -Syu; yay -Syu --noanswerclean A --noanswerdiff N"
+alias update="flatpak update -y; sudo pacman -Syu; yay -Syu --noanswerclean All --noanswerdiff None --answeredit All --answerupgrade All"
 alias protontricks="flatpak run com.github.Matoking.protontricks"
 
 alias reboot="systemctl reboot"
 alias e="nvim"
-alias t="btop"
+alias b="btop"
 alias pacman="sudo pacman"
 alias windows="grub-reboot 2"
 alias bios="grub-reboot 3"
-alias c="bat"
+alias cat="bat"
+alias "flatpak install"="flatpak install --user"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -122,4 +127,3 @@ alias c="bat"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=$PATH:/home/lutzgebelman/.spicetify
