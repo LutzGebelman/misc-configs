@@ -1,4 +1,4 @@
-HOSTNAME=$(hostname)
+HOSTNAME="$(echo $HOST)"
 PROMPT="%{$fg_bold[white]%}$USER@$HOSTNAME %(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$fg[cyan]%}%c%{$reset_color%}"
 PROMPT+=' $(git_prompt_info)'
 
