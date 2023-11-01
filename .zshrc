@@ -4,6 +4,7 @@ export PATH=$HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/scripts/bin
 export PATH=$PATH:$HOME/scripts/bash
+export PATH=$PATH:$HOME/go/bin
 #
 # Path to your oh-my-zsh installation.
 export ZSH_DISABLE_COMPFIX=1
@@ -84,13 +85,10 @@ ZSH_THEME="lg"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source $ZSH/oh-my-zsh.sh
 
-bindkey -v
-
 alias sudo='sudo '
-alias update="flatpak update -y; sudo pacman -Syu; yay -Syu --noanswerclean All --noanswerdiff None --answeredit All --answerupgrade All"
+alias update="flatpak update -y; sudo pacman -Syu; yay -Syu"
 alias protontricks="flatpak run com.github.Matoking.protontricks"
 
 alias reboot="systemctl reboot"
@@ -100,7 +98,7 @@ alias pacman="sudo pacman"
 alias windows="grub-reboot 2"
 alias bios="grub-reboot 3"
 alias cat="bat"
-alias "flatpak install"="flatpak install --user"
+alias rebuild_initrams="mkinitcpio -g /boot/initramfs-linux.img"
 
 # User configuration
 
